@@ -8,10 +8,10 @@ var options = {
     interval : 5000
 };
 
-solo("worker1", options, function(error, solo) {
+solo("worker1", options, function(error, worker) {
     console.log("Doing work 1");
 
     setTimeout(function finishWork() {
-        solo.done();
+        worker.done();
     }, 2000);
 });
