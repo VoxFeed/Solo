@@ -1,6 +1,6 @@
 {
-  "name": "solo",
-  "version": "0.1.0",
+  "name": "solo-worker",
+  "version": "0.1.1",
   "description": "Solo is a JavaScript library that runs a worker across node instances with the warranty that only one process will be active. This is useful for works when concurrency is an issue.",
   "main": "lib/solo.js",
   "scripts": {},
