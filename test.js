@@ -1,4 +1,4 @@
-var Solo = require("./lib/solo");
+var solo = require("./lib/solo");
 
 var options = {
     host     : '127.0.0.1',
@@ -8,7 +8,7 @@ var options = {
     interval : 5000
 };
 
-Solo("worker1", options, function(error, solo) {
+solo("worker1", options, function(error, solo) {
     console.log("Doing work 1");
 
     setTimeout(function finishWork() {
