@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/VoxFeed/Solo",
   "dependencies": {
+    "hiredis": "^0.4.1",
     "redis": "0.12.1",
     "redislock": "^1.2.0",
     "redlock": "git+https://github.com/manuelmhtr/redislock.git"
