@@ -1,7 +1,7 @@
 # Solo
-Solo is a JavaScript library that runs a single thread of a worker across multiple NodeJS instances, with the warranty that only one process will be active at a given moment. This is useful for works when concurrency is an issue.
+Solo is a Javascript library that runs a process across NodeJS instances with the warranty that only one process will be active at the time.
 
-Locking is implemented with Redis, usign [redislock](https://github.com/manuelmhtr/redislock) library.
+Locking is implemented with Redis, using [redislock](https://github.com/manuelmhtr/redislock) library.
 
 ## Install
 
@@ -51,22 +51,19 @@ It must be called to end the current work and trigger the `interval` the let oth
 
 
 ```
-var Solo = require("./lib/solo");
+const solo = require('./lib/index');
 
-var options = {
-    host     : '127.0.0.1',
-    port     : 6379,
-    ttl      : 7000,
-    ping     : 3000,
-    interval : 5000
+const options = {
+  host: '127.0.0.1',
+  port: 6379,
+  ttl: 7000,
+  ping: 3000,
+  interval: 5000
 };
 
-Solo("worker1", options, function(error, solo) {
-    console.log("Doing work 1");
-
-    setTimeout(function finishWork() {
-        solo.done();
-    }, 2000);
+solo('process1', options, (error, worker) => {
+    console.log('Doing process 1');
+    setTimeout(() => worker.done(), 2000);
 });
 ```
 

@@ -1,8 +1,8 @@
 {
   "name": "solo-worker",
   "version": "0.1.5",
-  "description": "Solo is a JavaScript library that runs a worker across node instances with the warranty that only one process will be active. This is useful for works when concurrency is an issue.",
-  "main": "lib/solo.js",
+  "description": "Solo is a Javascript library that runs a process across NodeJS instances with the warranty that only one process will be active at the time.",
+  "main": "lib/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -25,8 +25,8 @@
   "homepage": "https://github.com/VoxFeed/Solo",
   "dependencies": {
     "hiredis": "^0.4.1",
-    "redis": "0.12.1",
-    "redislock": "^1.2.0",
+    "redis": "^2.6.5",
+    "redislock": "^1.2.1",
     "redlock": "git+https://github.com/manuelmhtr/redislock.git"
   }
 }
