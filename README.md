@@ -50,7 +50,7 @@ It must be called to end the current work and trigger the `interval` the let oth
 ## Example
 
 
-```
+```javascript
 const solo = require('./lib/index');
 
 const options = {
